@@ -1,0 +1,76 @@
+<div class="header">
+  <p>Angular Blog</p>
+  <button *ngIf="headerBtn" [class]="btnIn" (click)="singInOpen()">Sing In</button>
+  <button *ngIf="headerBtn" [class]="btnUP " (click)="singUpOpen()">Sing Up</button>
+  <button *ngIf="!headerBtn" [class]="btnAddPost" (click)="addPostOpen()">Add post</button>
+  <button *ngIf="!headerBtn" [class]="userAcc " disabled>{{nameUPUser}}</button>
+  <button *ngIf="!headerBtn" [class]=" btnSingOut" (click)="singOut()">Sing Out</button>
+</div>
+
+
+<div class="post" *ngFor="let post of blogs; index as i">
+  <p class="topic">{{post.topic }}</p>
+  <span class="posted">Posted By: {{post.postedBy}}</span>
+  <span class="data"> ◴ {{post.date | date:'HH.mm dd.MM.YYYY'}}</span>
+  <p class="messege">{{post. message}}</p>
+  <div *ngIf="nameUPUser=== post.postedBy || nameUPUser=== 'admin'">
+    <button class="btn-edit" (click)="editPost(i)">Edit</button>
+    <button class="btn-delete" (click)="deletePost(i)"> delete</button>
+  </div>
+
+</div>
+
+<div [class]="singInForm">
+  <div class="singInForm">
+    <span class="title">Sing In</span><span class="close" (click)="close()">×</span>
+    <br><br>
+    <span> Email:</span>
+    <input type="text" class="email" [(ngModel)]="emailIn">
+    <br><br>
+    <span> Password:</span>
+    <input type="text" class="password" [(ngModel)]="passwordIn">
+    <br>
+    <span [class]="err"> Error:the data is not entered correctly</span>
+    <br>
+    <button class="btn-close btn" (click)="close()">Close</button>
+    <button class="btn-submit" (click)="goAccUser()"> Submit</button>
+  </div>
+</div>
+
+<div [class]="singUpForm">
+  <div class="singUpForm">
+    <span class="title">Sing Up</span>
+    <span class="close" (click)="close()">×</span>
+    <br><br>
+    <span> UserName</span>
+    <input type="text" class="email" [(ngModel)]="userName">
+    <br>
+    <span [class]="errName"> this name already exists</span>
+    <br>
+    <span> Email:</span>
+    <input type="text" class="email" [(ngModel)]="email">
+    <br><br>
+    <span> Password:</span>
+    <input type="text" class="password" [(ngModel)]="password">
+    <span [class]="err "> Error:the data is not entered correctly</span>
+    <button class="btn-close btn" (click)="close()">Close</button>
+    <button class="btn-submit" (click)="submitNewUser()"> Submit</button>
+  </div>
+</div>
+
+<div [class]="addPostForm ">
+  <div class="addPostForm">
+    <span class="title">Add post</span>
+    <span class="close" (click)="close()">×</span>
+    <br><br>
+    <span>Title:</span>
+    <input type="text" class="email" [(ngModel)]="titlePostAdd">
+    <br><br>
+    <span> Text:</span>
+    <textarea class="textForPost" [(ngModel)]="textPostAdd"></textarea>
+    <button class="btn-close btn" (click)="close()">Close</button>
+    <button class="btn-submit" *ngIf="editStatus" [disabled]="!textPostAdd && !titlePostAdd" (click)="submitNewPost()">
+      Submit</button>
+    <button class="btn-submit" *ngIf="!editStatus" (click)="savePost()"> Save</button>
+    </div>
+  </div>

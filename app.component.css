@@ -1,0 +1,255 @@
+.header {
+   width: 1000px;
+   height: 60px;
+   background-color: rgb(53, 53, 53);
+   color: white;
+   display: flex;
+   align-items: center;
+   padding: 0px 15px;
+   box-sizing: border-box;
+   margin: auto;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sing-in,
+.sing-up,
+.btnAddPost,
+.user,
+.btnSingOut {
+   width: 65px;
+   height: 30px;
+   color: forestgreen;
+   outline: none;
+   border-radius: 3px;
+   background-color: transparent;
+   border: 1px solid forestgreen;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sing {
+   margin-left: 730px;
+   border-right: none;
+}
+
+.sing-in:focus,
+.btnAddPost:focus {
+   box-shadow: 0px 0px 3px 3px rgba(45, 193, 45, 0.36);
+}
+
+.sing-in:hover,
+.btnAddPost:hover {
+   background-color: forestgreen;
+   color: rgb(53, 53, 53);
+}
+
+.sing-up {
+   color: #0962b1;
+   border: 1px solid #0962b1;
+
+}
+
+.sing-up:focus {
+   box-shadow: 0px 0px 5px 3px #0962b1;
+}
+
+.sing-up:hover {
+   background-color: #0962b1;
+   color: rgb(53, 53, 53);
+}
+
+.btnAddPost,
+.user,
+.btnSingOut {
+   margin-left: 650px;
+   width: 70px;
+   height: 30px;
+   border-top-right-radius: 0px;
+   border-bottom-right-radius: 0px;
+}
+
+.user {
+   margin: 0;
+   background-color: rgb(230, 169, 17);
+   color: rgb(53, 53, 53);
+   border-color: rgb(230, 169, 17);
+   border-radius: 0px;
+}
+
+.btnSingOut {
+   margin: 0;
+   color: rgb(230, 169, 17);
+   background-color: rgb(53, 53, 53);
+   border-color: rgb(230, 169, 17);
+   border-left: none;
+   border-radius: 3px;
+   border-top-left-radius: 0px;
+   border-bottom-left-radius: 0px;
+}
+
+.btnSingOut:focus {
+   box-shadow: 0px 0px 3px 3px rgba(245, 180, 16, 0.445);
+}
+
+.btnSingOut:hover {
+   background-color: rgb(230, 169, 17);
+   color: rgb(53, 53, 53);
+}
+
+
+
+
+.post {
+   width: 970px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   margin: auto;
+   margin-top: 15px;
+   padding: 10px 20px;
+   box-shadow: 0px 0px 9px rgb(162, 161, 161);
+}
+
+.topic {
+   font-weight: bold;
+   margin: 0px;
+}
+
+.posted,
+.data {
+   color: gray;
+   font-size: small;
+}
+
+.data {
+   margin-left: 775px;
+   font-size: 10px;
+
+}
+
+.messege {
+   margin-top: 10px;
+}
+
+
+
+
+.modal {
+   display: block;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, 0.376);
+   z-index: 3;
+   padding: 30px 0px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.singInForm,
+.singUpForm,
+.addPostForm {
+   margin: auto;
+   width: 350px;
+   height: 250px;
+   margin-top: 20px;
+   background-color: white;
+   padding: 10px 15px;
+   box-sizing: border-box;
+   border-radius: 3px;
+}
+
+.singUpForm {
+   height: 310px;
+}
+
+.title {
+   font-weight: 500;
+   margin-right: 240px;
+}
+
+.close {
+   font-weight: 600;
+   color: rgb(141, 141, 141);
+}
+
+input[type=text],
+.textForPost {
+   width: 315px;
+   outline: none;
+   height: 25px;
+   border: none;
+   border-radius: 3px;
+   margin-top: 4px;
+   box-shadow: 0px 0px 3px 2px rgba(162, 161, 161, 0.551);
+   padding: 0px 9px;
+   box-sizing: border-box;
+}
+
+.textForPost {
+   height: 60px;
+   padding-top: 5px;
+}
+
+input[type=text]:focus,
+.textForPost:focus {
+   color: rgba(87, 88, 88, 0.709);
+   box-shadow: 0px 0px 3px 2px rgba(0, 112, 168, 0.551);
+}
+
+.btn {
+   margin-left: 190px;
+   margin-right: 5px;
+   margin-top: 5px;
+}
+
+.btn-close,
+.btn-submit,
+.btn-delete,
+.btn-edit {
+   width: 60px;
+   height: 25px;
+   color: white;
+   background-color: rgb(78, 78, 78);
+   border: none;
+   border-radius: 3px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-weight: 300;
+   text-align: center;
+
+}
+
+.btn-submit {
+   background-color: forestgreen;
+}
+
+.btn-delete {
+   background-color: crimson;
+}
+
+.btn-edit {
+   background-color: darkorange;
+   color: black;
+   margin-left: 830px;
+}
+
+.none {
+   display: none;
+}
+
+.block {
+   color: red;
+   margin-top: 0px;
+   font-size: 10px;
+   font-weight: 700;
+}
+
+.blockName {
+   color: red;
+   margin-top: 0px;
+   font-size: 10px;
+   font-weight: 700;
+}
+
+.hide {
+   color: transparent;
+   overflow: hidden;
+}
